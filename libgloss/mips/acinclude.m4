@@ -32,6 +32,11 @@ case "${target}" in
     MIPS_SCRIPT_LIST="ddb ddb-kseg0 nullmon"
     MIPS_BSP_LIST="libpmon.a libnullmon.a"
     ;;
+  mipsel*-arc | \
+  mipsel-arc)
+    MIPS_CRT0="crt0.o"
+    MIPS_BSP_LIST="libarc.a"
+    ;;
   mips*)
     MIPS_CRT0="crt0_cfe.o crt0.o"
     MIPS_PART_SPECIFIC_OBJ="vr4300.o cma101.o"
